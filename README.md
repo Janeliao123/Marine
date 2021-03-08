@@ -9,4 +9,4 @@ Marine Online Judge 為一款線上程式學習平台透過後臺使用者的數
 
 
 ### 系統環境
-Framework：Laravel
+Framework：Laravel、Vue

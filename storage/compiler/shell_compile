@@ -1,0 +1,10 @@
+#!/bin/bash
+name="$1"
+path="$2"
+#name="a"$(($(date +%s%N)/1000000))
+#echo $name
+sudo docker run --name $name -dit cytsai/gc-compiler bash
+sudo docker cp ../storage/app/$path/Helloworld.c $name:Helloworld.c
+#sudo docker cp input.in $name:input.in
+sudo docker exec -i $name /usr/bin/g++ -o /a Helloworld.c 2> ../storage/app/$path/com_err
+

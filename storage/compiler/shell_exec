@@ -1,0 +1,7 @@
+#!/bin/bash
+name="$1"
+path="$2"
+if [ ! -s ./com_err ]; then
+  sudo docker exec -i $name /usr/bin/timeout 5s /usr/bin/time -v /a <../storage/app/$path/input.in >../storage/app/$path/output 2>../storage/app/$path/run_err
+fi
+
